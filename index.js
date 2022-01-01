@@ -1,10 +1,16 @@
 function doWork() {
-    let start = new Date().getTime()
-    let now = start;
-    while (now < start + 500) {
-        now = new Date().getTime()
-    }
+    return new Promise(resolve => {
+        const myWorker = new Worker("worker.js");
+
+        myWorker.postMessage('doWork')
+
+        myWorker.onmessage = function() {
+            console.log('in here')
+            resolve()
+        }
+    })
 }
+    
 
 function sleep(time) {
     return new Promise(resolve => setTimeout(resolve, time))

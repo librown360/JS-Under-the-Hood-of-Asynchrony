@@ -6,16 +6,16 @@ function exampleThree() {
 
     async function two() {
         await sleep(500)
-        doWork()
+        await doWork()
         await sleep(500)
-        doWork()
+        await doWork()
     }
 
     async function three() {
         await sleep(500)
-        doWork()
+        await doWork()
         await sleep(500)
-        doWork()
+        await doWork()
     }
 
     one()

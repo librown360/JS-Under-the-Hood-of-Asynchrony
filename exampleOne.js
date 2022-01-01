@@ -1,11 +1,11 @@
 function exampleOne() {
     
-    function one() {
-        doWork()
+    async function one() {
+        await doWork()
     }
 
-    function two() {
-        doWork()
+    async function two() {
+        await doWork()
     }
 
     one()

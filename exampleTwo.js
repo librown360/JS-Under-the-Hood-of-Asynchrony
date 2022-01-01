@@ -1,15 +1,15 @@
 function exampleTwo() {
     
-    function one() {
-        doWork()
+    async function one() {
+        await doWork()
     }
 
     async function two() {
-        doWork()
+        await doWork()
         await sleep(500)
-        doWork()
+        await doWork()
         await sleep(500)
-        doWork()
+        await doWork()
     }
 
     one()
